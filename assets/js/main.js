@@ -26,18 +26,19 @@ for (let i = 0; i < numberRandomArray.length; i++) {
 
 // funzione affinchè numeri devono sparire dopo 30 secondi 
 
-setTimeout(disappearElement, 10000);
+setTimeout(disappearElement, 30000);
 
 // compare prompt dove utente deve inserire i 5 numeri 
 let userChosedNumbers = []
-setTimeout(insertNumbers, 10200);
+setTimeout(insertNumbers, 30200);
 
 
 // confronto fra numeri apparsi e numeri inseirti dall'utente
-
-setTimeout(userNumberVSPcNumbers, 10300)
-
 // a schermo numeri quali e quanti numeri indovinato dalll'utente.
+
+setTimeout(userNumberVSPcNumbers, 30300)
+
+
 
 function disappearElement() {
     let playBox = document.querySelector('.number_box')
@@ -59,8 +60,8 @@ function insertNumbers() {
 }
 
 function userNumberVSPcNumbers() {
- console.log(userChosedNumbers);
- console.log(numberRandomArray);
+    //console.log(userChosedNumbers);
+    //console.log(numberRandomArray);
     let correctNumbers = [];
     let wrongNumbers = [];
 
@@ -79,14 +80,15 @@ function userNumberVSPcNumbers() {
 
     }
 
-    console.log(correctNumbers);
-    console.log(wrongNumbers);
+    //console.log(wrongNumbers);
+    //console.log(correctNumbers);
     
     if (correctNumbers.length === 5) {
-        alert('Hai Vinto')
+        alert(`Hai vinto! Numeri corretti ${correctNumbers.length}: ${correctNumbers.toString()}`)
+
     } else {
      
-        alert(`Hai perso! Numeri corretti ${correctNumbers.length} Numeri sbagliati ${wrongNumbers.length}`)
+        alert(`Hai perso! Numeri corretti ${correctNumbers.length}: ${correctNumbers.toString()}`)
     }
 }
 

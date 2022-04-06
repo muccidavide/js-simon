@@ -24,12 +24,9 @@ for (let i = 0; i < numberRandomArray.length; i++) {
     
 }
 
-
-//console.log(boxNumberElement);
-
-
-
 // funzione affinchè numeri devono sparire dopo 30 secondi 
+
+setTimeout(disappearElement, 5000);
 
 // compare prompt dove utente deve inserire i 5 numeri 
 
@@ -37,3 +34,8 @@ for (let i = 0; i < numberRandomArray.length; i++) {
 
 
 // a schermo numeri quali e quanti numeri indovinato dalll'utente.
+
+function disappearElement() {
+    let playBox = document.querySelector('.number_box')
+    playBox.style.display = 'none'
+}

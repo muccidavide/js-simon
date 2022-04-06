@@ -1,14 +1,19 @@
+.container_box{
+    background-color: antiquewhite;
+    width: 50%;
+    margin: auto;
+    border-radius: 1rem;
+}
+
+
 .number_box{
     font-size: 2rem;
     height: 200px;
-    width: 50%;
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-    background-color: antiquewhite;
-    border-radius: 1rem;
     text-align: center;
+    padding: 2rem;
 }

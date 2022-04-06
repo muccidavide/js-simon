@@ -14,9 +14,18 @@ while (numberRandomArray.length < 5 ){
         numberRandomArray.push(numberRandom)
     }
 }
-// console.log(numberRandomArray);
 
 // li appendo ad un elemento della DOM
+
+let boxNumberElement = document.querySelector('.numbers');
+for (let i = 0; i < numberRandomArray.length; i++) {
+    const numberItem = numberRandomArray[i];
+    boxNumberElement.append(` ${numberItem} `)
+    
+}
+
+
+//console.log(boxNumberElement);
 
 
 

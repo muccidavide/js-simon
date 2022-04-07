@@ -4,7 +4,7 @@ Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto pr
 Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 */
 
-// creo funzione per generare 5 numeri random
+// genero i 5 numeri random
 
 
 let numberRandomArray = [];
@@ -24,7 +24,7 @@ for (let i = 0; i < numberRandomArray.length; i++) {
     
 }
 
-// funzione affinchè numeri devono sparire dopo 30 secondi 
+// funzione affinchè numeri spariscano dopo 30 secondi 
 
 setTimeout(disappearElement, 30000);
 
@@ -33,8 +33,8 @@ let userChosedNumbers = []
 setTimeout(insertNumbers, 30200);
 
 
-// confronto fra numeri apparsi e numeri inseirti dall'utente
-// a schermo numeri quali e quanti numeri indovinato dalll'utente.
+// confronto fra numeri apparsi e numeri inseriti dall'utente
+// a schermo quali e quanti numeri indovinati dalll'utente.
 
 setTimeout(userNumberVSPcNumbers, 30300)
 
@@ -63,24 +63,20 @@ function userNumberVSPcNumbers() {
     //console.log(userChosedNumbers);
     //console.log(numberRandomArray);
     let correctNumbers = [];
-    let wrongNumbers = [];
 
     for (let i = 0; i < numberRandomArray.length; i++) {
-        const numberRandom = numberRandomArray[i];
+        //const numberRandom = numberRandomArray[i];
         const userChosedNumber = userChosedNumbers[i];
 
-        if (numberRandomArray.includes(userChosedNumber)) {
+        if (numberRandomArray.includes(userChosedNumber) && !correctNumbers.includes(userChosedNumber)) {
             correctNumbers.push(userChosedNumber)
 
 
 
-        } else {
-            wrongNumbers.push(userChosedNumber)
-        }
-
+         } 
+         
     }
 
-    //console.log(wrongNumbers);
     //console.log(correctNumbers);
     
     if (correctNumbers.length === 5) {
